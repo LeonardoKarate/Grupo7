@@ -1,14 +1,19 @@
 package com.grupo7.DroneFeeder.Erro;
 
-import javax.net.ssl.SSLEngineResult.Status;
-
 public class Erro {
 
-  private Status status;
   private String mensagem;
-  
-  public Erro(Status status, String mensagem) {
-    this.status = status;
+
+  public Erro(String mensagem) {
     this.mensagem = mensagem;
   }
+
+  public String getMensagem() {
+    return mensagem;
+  }
+
+  public void setMensagem(String mensagem) {
+    this.mensagem = mensagem;
+  }
+
 }
