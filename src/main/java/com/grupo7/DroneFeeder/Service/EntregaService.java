@@ -1,5 +1,6 @@
 package com.grupo7.DroneFeeder.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,21 @@ public class EntregaService {
   public String delete(Long id) {
     repository.deleteById(id);
     return "Entrega removida com sucesso";
+  }
+
+  public List<String> findAllVideos() {
+    List<Entrega> results = repository.findAll();
+    List<String> videos = new ArrayList<>();
+
+    for (Entrega entrega : results) {
+      videos.add(entrega.getVideoUrl());
+    }
+
+    return videos;
+  }
+
+  public String findVideo(Long id) {
+    Entrega result = repository.findById(id).get();
+    return result.getVideoUrl();
   }
 }
