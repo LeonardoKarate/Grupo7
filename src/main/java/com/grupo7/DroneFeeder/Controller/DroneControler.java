@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.grupo7.DroneFeeder.Entity.Drone;
 import com.grupo7.DroneFeeder.Service.DroneService;
+import jakarta.ws.rs.core.Response;
 
 @RestController
 @RequestMapping("/drone")
@@ -21,31 +22,32 @@ public class DroneControler {
   private DroneService service;
 
   @PostMapping
-  public Drone createOneDrone(@RequestBody Drone drone) {
+  public Response createOneDrone(@RequestBody Drone drone) {
     Drone result = service.createOneDrone(drone);
-    return result;
+    return Response.status(Response.Status.CREATED).entity(result).build();
   }
 
   @GetMapping
-  public List<Drone> getAllDrone() {
+  public Response getAllDrone() {
     List<Drone> result = service.getAllDrone();
-    return result;
+    return Response.status(Response.Status.OK).entity(result).build();
   }
 
   @GetMapping("/{id}")
-  public Drone findDrone(@PathVariable long id) {
+  public Response findDrone(@PathVariable long id) {
     Drone result = service.findDrone(id);
-    return result;
+    return Response.status(Response.Status.OK).entity(result).build();
   }
 
   @PutMapping("/{id}")
-  public Drone updateOneDrone(@PathVariable long id, @RequestBody Drone drone) {
+  public Response updateOneDrone(@PathVariable long id, @RequestBody Drone drone) {
     Drone result = service.updateOneDrone(id, drone);
-    return result;
+    return Response.status(Response.Status.OK).entity(result).build();
   }
 
   @DeleteMapping("/{id}")
-  public String deleteOneDrone(@PathVariable long id) {
-    return service.deleteOneDrone(id);
+  public Response deleteOneDrone(@PathVariable long id) {
+    String result = service.deleteOneDrone(id);
+    return Response.status(Response.Status.OK).entity(result).build();
   }
 }
