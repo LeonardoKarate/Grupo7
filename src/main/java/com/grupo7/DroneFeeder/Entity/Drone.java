@@ -14,12 +14,22 @@ public class Drone {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
-  
-  @ManyToOne(cascade=CascadeType.PERSIST)
+
+  @ManyToOne(cascade = CascadeType.PERSIST)
   @JoinColumn(name = "entrega_id")
   private Entrega entrega;
   private String latitude;
   private String longitude;
+
+  public Drone() {
+
+  }
+
+  public Drone(Entrega entrega, String latitude, String longitude) {
+    this.entrega = entrega;
+    this.latitude = latitude;
+    this.longitude = longitude;
+  }
 
   public String getLatitude() {
     return latitude;
@@ -35,10 +45,6 @@ public class Drone {
 
   public void setLongitude(String longitude) {
     this.longitude = longitude;
-  }
-
-  public Drone() {
-
   }
 
   public Entrega getEntrega() {
