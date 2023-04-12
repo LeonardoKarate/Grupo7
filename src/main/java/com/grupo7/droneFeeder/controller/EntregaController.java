@@ -1,7 +1,9 @@
-package com.grupo7.DroneFeeder.Controller;
+package com.grupo7.dronefeeder.controller;
 
+import com.grupo7.dronefeeder.dto.EntregaDto;
+import com.grupo7.dronefeeder.entity.Entrega;
+import com.grupo7.dronefeeder.service.EntregaService;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.grupo7.DroneFeeder.Dto.EntregaDto;
-import com.grupo7.DroneFeeder.Entity.Entrega;
-import com.grupo7.DroneFeeder.Service.EntregaService;
 
+/**
+ * Classe EntregaController.
+ */
 @RestController
 @RequestMapping(value = "/entrega")
 public class EntregaController {
@@ -62,6 +64,9 @@ public class EntregaController {
     return ResponseEntity.ok(result);
   }
 
+  /**
+   * metodo updateStatus.
+   */
   @PatchMapping("/{id}")
   public ResponseEntity<Entrega> updateStatus(@PathVariable Long id, @RequestBody String status) {
     Entrega result = service.findById(id);
@@ -70,6 +75,9 @@ public class EntregaController {
     return ResponseEntity.ok(result);
   }
 
+  /**
+   * metodo updateVideo.
+   */
   @PatchMapping("/{id}/video")
   public ResponseEntity<Entrega> updateVideo(@PathVariable Long id, @RequestBody String videoUrl) {
     Entrega result = service.findById(id);

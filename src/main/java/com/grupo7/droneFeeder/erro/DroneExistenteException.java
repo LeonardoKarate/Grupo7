@@ -1,6 +1,9 @@
-package com.grupo7.DroneFeeder.Erro;
+package com.grupo7.dronefeeder.erro;
 
-public class DroneExistenteException extends RuntimeException{
+/**
+ * Classe DroneExistenteException.
+ */
+public class DroneExistenteException extends RuntimeException {
 
   private static String mensagem = "não pode criar drone com id especifico";
   
