@@ -1,12 +1,14 @@
-package com.grupo7.DroneFeeder.Entity;
+package com.grupo7.dronefeeder.entity;
 
 import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Classe Entrega.
+ */
 @Entity
 public class Entrega {
   
@@ -26,6 +28,9 @@ public class Entrega {
 
   public Entrega() {}
 
+  /**
+   * metodo Construtor.
+   */
   public Entrega(LocalDateTime data, String endereco, String status, String videoUrl) {
     this.data = data;
     this.endereco = endereco;

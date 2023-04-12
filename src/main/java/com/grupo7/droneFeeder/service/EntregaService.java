@@ -1,21 +1,25 @@
-package com.grupo7.DroneFeeder.Service;
+package com.grupo7.dronefeeder.service;
 
+import com.grupo7.dronefeeder.dto.EntregaDto;
+import com.grupo7.dronefeeder.entity.Entrega;
+import com.grupo7.dronefeeder.repository.EntregaRepository;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.grupo7.DroneFeeder.Dto.EntregaDto;
-import com.grupo7.DroneFeeder.Entity.Entrega;
-import com.grupo7.DroneFeeder.Repository.EntregaRepository;
-
+/**
+ * classe EntregaService.
+ */
 @Service
 public class EntregaService {
 
   @Autowired
   private EntregaRepository repository;
 
+  /**
+   * metodo create.
+   */
   public Entrega create(EntregaDto entrega) {
     Entrega result = new Entrega();
     result.setData(entrega.getData());
@@ -45,6 +49,9 @@ public class EntregaService {
     return "Entrega removida com sucesso";
   }
 
+  /**
+   * metodo findAllVideos.
+   */
   public List<String> findAllVideos() {
     List<Entrega> results = repository.findAll();
     List<String> videos = new ArrayList<>();

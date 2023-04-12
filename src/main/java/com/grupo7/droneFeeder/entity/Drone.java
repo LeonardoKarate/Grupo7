@@ -1,4 +1,4 @@
-package com.grupo7.DroneFeeder.Entity;
+package com.grupo7.dronefeeder.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+/**
+ * Classe Drone.
+ */
 @Entity
 public class Drone {
 
@@ -15,7 +18,7 @@ public class Drone {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
   
-  @ManyToOne(cascade=CascadeType.PERSIST)
+  @ManyToOne(cascade = CascadeType.PERSIST)
   @JoinColumn(name = "entrega_id")
   private Entrega entrega;
   private String latitude;

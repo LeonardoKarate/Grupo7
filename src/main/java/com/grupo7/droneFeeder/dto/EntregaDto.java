@@ -1,7 +1,10 @@
-package com.grupo7.DroneFeeder.Dto;
+package com.grupo7.dronefeeder.dto;
 
 import java.time.LocalDateTime;
 
+/**
+ * Classe EntregaDto.
+ */
 public class EntregaDto {
   
   private LocalDateTime data;

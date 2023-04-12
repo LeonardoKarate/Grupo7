@@ -1,12 +1,15 @@
-package com.grupo7.DroneFeeder.Controller;
+package com.grupo7.dronefeeder.controller;
 
+import com.grupo7.dronefeeder.erro.DroneExistenteException;
+import com.grupo7.dronefeeder.erro.DroneNaoEncontrado;
+import com.grupo7.dronefeeder.erro.Erro;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import com.grupo7.DroneFeeder.Erro.DroneExistenteException;
-import com.grupo7.DroneFeeder.Erro.DroneNaoEncontrado;
-import com.grupo7.DroneFeeder.Erro.Erro;
 
+/**
+ * Classe GerenciadorExceptionController.
+ */
 @ControllerAdvice
 public class GerenciadorExceptionController {
 

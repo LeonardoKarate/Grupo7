@@ -1,5 +1,8 @@
-package com.grupo7.DroneFeeder.Erro;
+package com.grupo7.dronefeeder.erro;
 
+/**
+ * Classe Erro.
+ */
 public class Erro {
 
   private String mensagem;
