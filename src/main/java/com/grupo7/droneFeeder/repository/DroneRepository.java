@@ -1,6 +1,6 @@
-package com.grupo7.dronefeeder.repository;
+package com.grupo7.droneFeeder.repository;
 
-import com.grupo7.dronefeeder.entity.Drone;
+import com.grupo7.droneFeeder.entity.Drone;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

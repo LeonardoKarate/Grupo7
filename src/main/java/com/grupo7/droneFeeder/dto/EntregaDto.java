@@ -1,4 +1,4 @@
-package com.grupo7.dronefeeder.dto;
+package com.grupo7.droneFeeder.dto;
 
 import java.time.LocalDateTime;
 

@@ -1,8 +1,8 @@
-package com.grupo7.dronefeeder.controller;
+package com.grupo7.droneFeeder.controller;
 
-import com.grupo7.dronefeeder.erro.DroneExistenteException;
-import com.grupo7.dronefeeder.erro.DroneNaoEncontrado;
-import com.grupo7.dronefeeder.erro.Erro;
+import com.grupo7.droneFeeder.erro.DroneExistenteException;
+import com.grupo7.droneFeeder.erro.DroneNaoEncontrado;
+import com.grupo7.droneFeeder.erro.Erro;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,8 +1,8 @@
-package com.grupo7.dronefeeder.controller;
+package com.grupo7.droneFeeder.controller;
 
-import com.grupo7.dronefeeder.dto.EntregaDto;
-import com.grupo7.dronefeeder.entity.Entrega;
-import com.grupo7.dronefeeder.service.EntregaService;
+import com.grupo7.droneFeeder.dto.EntregaDto;
+import com.grupo7.droneFeeder.entity.Entrega;
+import com.grupo7.droneFeeder.service.EntregaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

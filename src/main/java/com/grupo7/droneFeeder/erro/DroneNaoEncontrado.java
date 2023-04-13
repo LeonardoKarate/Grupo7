@@ -1,4 +1,4 @@
-package com.grupo7.dronefeeder.erro;
+package com.grupo7.droneFeeder.erro;
 
 /**
  * Classe DroneNaoEncontrado.

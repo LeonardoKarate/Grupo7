@@ -1,7 +1,7 @@
-package com.grupo7.dronefeeder.repository;
+package com.grupo7.droneFeeder.repository;
 
-import com.grupo7.dronefeeder.entity.Entrega;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.grupo7.droneFeeder.entity.Entrega;
 
 /**
  * interface EntregaRepository.

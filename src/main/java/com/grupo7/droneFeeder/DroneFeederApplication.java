@@ -1,4 +1,4 @@
-package com.grupo7.dronefeeder;
+package com.grupo7.droneFeeder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -23,6 +23,15 @@ public class Drone {
   private Entrega entrega;
   private String latitude;
   private String longitude;
+  
+  /**
+   * Metodo contrutor.
+   */
+  public Drone(Entrega entrega, String latitude, String longitude) {
+    this.entrega = entrega;
+    this.latitude = latitude;
+    this.longitude = longitude;
+  }
 
   public String getLatitude() {
     return latitude;

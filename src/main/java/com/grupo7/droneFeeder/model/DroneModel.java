@@ -1,4 +1,4 @@
-package com.grupo7.dronefeeder.model;
+package com.grupo7.droneFeeder.model;
 
 /**
  * Classe DroneModel.

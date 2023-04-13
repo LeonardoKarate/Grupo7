@@ -1,7 +1,5 @@
-package com.grupo7.dronefeeder.controller;
+package com.grupo7.droneFeeder.controller;
 
-import com.grupo7.dronefeeder.entity.Drone;
-import com.grupo7.dronefeeder.service.DroneService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import com.grupo7.droneFeeder.entity.Drone;
+import com.grupo7.droneFeeder.service.DroneService;
 
 /**
  * Classe DroneControler.
@@ -27,7 +27,7 @@ public class DroneControler {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Drone createOneDrone(@RequestBody Drone drone) throws Error {
+  public com.grupo7.droneFeeder.entity.Drone createOneDrone(@RequestBody Drone drone) throws Error {
     Drone result = service.createOneDrone(drone);
     return result;
   }

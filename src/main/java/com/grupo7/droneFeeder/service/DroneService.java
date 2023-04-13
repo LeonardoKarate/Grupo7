@@ -1,9 +1,9 @@
-package com.grupo7.dronefeeder.service;
+package com.grupo7.droneFeeder.service;
 
-import com.grupo7.dronefeeder.entity.Drone;
-import com.grupo7.dronefeeder.erro.DroneExistenteException;
-import com.grupo7.dronefeeder.erro.DroneNaoEncontrado;
-import com.grupo7.dronefeeder.repository.DroneRepository;
+import com.grupo7.droneFeeder.entity.Drone;
+import com.grupo7.droneFeeder.erro.DroneExistenteException;
+import com.grupo7.droneFeeder.erro.DroneNaoEncontrado;
+import com.grupo7.droneFeeder.repository.DroneRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

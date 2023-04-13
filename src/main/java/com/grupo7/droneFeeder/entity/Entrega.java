@@ -1,4 +1,4 @@
-package com.grupo7.dronefeeder.entity;
+package com.grupo7.droneFeeder.entity;
 
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
